@@ -85,7 +85,7 @@
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo mt-1 row">
                                     <a href="index.html">
-                                        <img src="~/Content/assets/img/logo/CCP45-01.png" alt="" width="240">
+                                        <img src="~/Content/assets/img/logo/CCP45-01.png" alt="" width="160" height="100">
                                     </a>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <div class="logo mt-1 row">
                                         <p hidden>{LOGO ลูกค้า}</p>
-                                        <a href="index.html"hidden>
+                                        <a href="index.html" hidden>
                                             <img src="~/Content/assets/img/logo/CCP45-01.png" alt="" width="240">
                                         </a>
                                     </div>
@@ -119,21 +119,24 @@
 
         @RenderBody()
     </div>
+     
 
-    <footer class="mt-30">
-        <!-- Footer Start-->
-        <div class="footer-copyright-area text-center">
+    <footer class="footer"style=""hidden>
+        <div class="copy-right_text wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".3s">
             <div class="container">
+                <div class="footer_border"></div>
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="footer-copy-right">
-                            <p style="color:black">Copyright &copy; Designed & Developed by <a href="https://www.pdcable.com/en/home-2/">IT</a> <script>document.write(new Date().getFullYear())</script> </p>
-                        </div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This project <i class="fa fa-heart-o" aria-hidden="true"></i> by Business Team (IT Stark)</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End-->
     </footer>
     <!-- JS here -->
     <!-- All JS Custom Plugins Link Here here -->
