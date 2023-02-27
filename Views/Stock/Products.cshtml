@@ -5,3 +5,210 @@
 
 <h2 class="text-center">Products</h2>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex">
+            <div class="p-2">
+                <h2>รายการสินค้าทั้งหมด</h2>
+            </div>
+            <!-- Button trigger modal -->
+            <div class="ml-auto p-2">
+                <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#InputModal">นำเข้ารายการสินค้า</button>
+                <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#CreateModal">สร้างใหม่</button>
+            </div>
+
+            <!-- Modal Create Product-->
+            <div class="modal fade" id="CreateModal" tabindex="-1" aria-labelledby="CreateModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="CreateModalLabel">สร้างสินค้า</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputCategory">ประเภทสินค้า:</label>
+                                            <select class="form-control">
+                                                <option>เลือกประเภทสินค้า</option>
+                                                <option>อาหาร</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputId">รหัสสินค้า:</label>
+                                            <input type="text" class="form-control" id="inputId">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputUnit">หน่วยสินค้า:</label>
+                                            <select class="form-control">
+                                                <option>เลือกหน่วยสินค้า</option>
+                                                <option>กก.</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputName">ชื่อสินค้า:</label>
+                                            <input type="text" class="form-control" id="inputName">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputQuantity">จำนวนสินค้า:</label>
+                                            <input type="text" class="form-control" id="inputQuantity">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputPrice">ราคาขาย:</label>
+                                            <input type="text" class="form-control" id="inputPrice">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="dateInput">วันที่:</label>
+                                            <input type="date" class="form-control" id="dateInput">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputBuy">ราคาซื้อ:</label>
+                                            <input type="text" class="form-control" id="inputBuy">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="imageInput">รูปสินค้า:</label>
+                                        <input type="file" class="form-control-file" id="imageInput">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+                            <button type="submit" class="btn btn-primary">บันทึก</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover table-light">
+                <thead>
+                    <tr>
+                        <th class="col-lg-1">รูปสินค้า</th>
+                        <th class="col-lg-1">รหัสสินค้า</th>
+                        <th class="col-lg-4">รายการสินค้า</th>
+                        <th class="col-lg-1">ราคาต่อหน่วย</th>
+                        <th class="col-lg-1">จำนวนคงคลัง</th>
+                        <th class="col-lg-2">หมวดสินค้า</th>
+                        <th class="col-lg-1">แก้ไข</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-lg-1"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fstock-photo%2Fno_image_available.html&psig=AOvVaw2eLWZ7j13ZoQ0lsr_BzZMR&ust=1677575946955000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNi20cSvtf0CFQAAAAAdAAAAABAS"  class="img-fluid"/></td>
+                        <td class="col-lg-1">1234</td>
+                        <td class="col-lg-4">ปลากระป๋อง</td>
+                        <td class="col-lg-1">30</td>
+                        <td class="col-lg-1">20</td>
+                        <td class="col-lg-2">อาหาร</td>
+                        <td class="col-lg-1">
+                            <div class="dropdown">
+                                <button class="btn btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    EDIT
+                                    <span class="caret"></span>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <!-- Button trigger modal -->
+                                    <a class="dropdown-item" data-toggle="modal" data-target="#EditModal">แก้ไขสินค้า</a>
+                                    <a class="dropdown-item" href="#">สร้างซ้ำ</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">ลบสินค้า</a>
+                                </div>
+                                    <!-- Modal Edit Product-->
+                                <div class="modal fade" id="EditModal" tabindex="-1" aria-labelledby="EditModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="EditModalLabel">แก้ไขสินค้า</h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-6">
+                                                                <label for="inputCategory">ประเภทสินค้า:</label>
+                                                                <select class="form-control">
+                                                                    <option>เลือกประเภทสินค้า</option>
+                                                                    <option>อาหาร</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="inputId">รหัสสินค้า:</label>
+                                                                <input type="text" class="form-control" id="inputId">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-6">
+                                                                <label for="inputUnit">หน่วยสินค้า:</label>
+                                                                <select class="form-control">
+                                                                    <option>เลือกหน่วยสินค้า</option>
+                                                                    <option>กก.</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="inputName">ชื่อสินค้า:</label>
+                                                                <input type="text" class="form-control" id="inputName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-6">
+                                                                <label for="inputQuantity">จำนวนสินค้า:</label>
+                                                                <input type="text" class="form-control" id="inputQuantity">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="inputPrice">ราคาขาย:</label>
+                                                                <input type="text" class="form-control" id="inputPrice">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-6">
+                                                                <label for="dateInput">วันที่:</label>
+                                                                <input type="date" class="form-control" id="dateInput">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="inputBuy">ราคาซื้อ:</label>
+                                                                <input type="text" class="form-control" id="inputBuy">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="imageInput">รูปสินค้า:</label>
+                                                            <input type="file" class="form-control-file" id="imageInput">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button id="#" type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
+                                                <button id="#" type="submit" class="btn btn-success">บันทึก</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
