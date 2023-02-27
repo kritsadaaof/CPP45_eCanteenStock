@@ -1,195 +1,231 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CPP45 | Catering</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="~/Content/assets/img/catering.png?t=@DateTime.Now.ToString("yyyyMMddHHmm")">
-
-
-
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="~/Content/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="~/Content/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/Content/assets/css/flaticon.css">
-    <link rel="stylesheet" href="~/Content/assets/css/slicknav.css">
-    <link rel="stylesheet" href="~/Content/assets/css/animate.min.css">
-    <link rel="stylesheet" href="~/Content/assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="~/Content/assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="~/Content/assets/css/themify-icons.css">
-    <link rel="stylesheet" href="~/Content/assets/css/slick.css">
-    <!--
-    <link rel="stylesheet" href="~/Content/assets/css/nice-select.css">-------------->
-    <link rel="stylesheet" href="~/Content/assets/css/style.css">
-    @Scripts.Render("~/bundles/jquery")     <!--เรียกใช้งาน "~/Scripts/jquery-{version}.js" เพื่อให้ JS ของแต่ละ Page ทำงาน-->
-    <!-- notification CSS
-       ============================================ -->
-    <link rel="stylesheet" href="~/Content/assets/css/notification/notification.css">
-    <!-- animate CSS
-        ============================================ -->
-    <link rel="stylesheet" href="~/Content/assete/css/animate.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>@ViewBag.Title - CPP45-eCanteen</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="20x20" href="~/Content/images/CCP45-01.png">
+    <!-- Pignose Calender -->
+    <link href="~/Content/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+    <!-- Chartist -->
+    <link rel="stylesheet" href="~/Content/plugins/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="~/Content/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+    <link href="~/Content/plugins/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="~/Content/css/style.css" rel="stylesheet">
 
 </head>
+
 <body>
-    <!-- Preloader Start    -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="~/Content/assets/img/logo/CCP45-01.png" alt="">
-                </div>
-            </div>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="10" />
+            </svg>
         </div>
     </div>
-    <!-- Preloader Start -->
-    <header>
-        <!-- Header Start -->
-        <div class="header-area">
-            <div class="main-header">
-                <div class="header-top top-bg  d-lg-block MB">
-                    <div class="container">
-                        <div class="row justify-content-between align-items-center">
-                            <div class="col-lg-8">
-                                <div class="header-info-left">
+    <!--*******************
+        Preloader end
+    ********************-->
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="~/Home/Index">
+                    <b class="logo-abbr"><img src="~/Content/images/CCP45-01.png" alt=""width="150" height="30"> </b>
+                    <span class="logo-compact"><img src="~/Content/images/CCP45-01.png" alt=""></span>
+                    <span class="brand-title">
+                        <label style="font-size:36px;font-family:'Angsana New'; color:aliceblue">CPP45-eCanteen</label>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content clearfix">
+
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="toggle-icon"><i class="icon-menu"></i></span>
+                    </div>
+                </div> 
+                <div class="header-right">
+                    <ul class="clearfix">                       
+                        <li class="icons dropdown">
+                            <div class="user-img c-pointer position-relative" data-toggle="dropdown">
+                                <!--  <span class="activity active"></span> -->
+                                <img src="~/Content/images/user/form-user.png" height="40" width="40" alt="">
+                            </div>
+                            <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
+                                <div class="dropdown-content-body">
                                     <ul>
-                                        <li>it@cpp45.co.th</li>
-                                        <li>(+66) 033 640629</li>
                                         <li>
-                                            ระบบบริหาร Catering ภายใน CPP45
+                                            <a href="~/Home/Login"><i class="icon-user"></i> <span>Profile</span></a>
+                                        </li> 
+                                        <li>
+                                            <a href="~/Home/Login"><i class="icon-lock"></i> <span>Lock Screen</span></a>
                                         </li>
+                                        <li><a href="~/Home/Login"><i class="icon-key"></i> <span>Logout</span></a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="header-info-right f-right">
-                                    <ul class="header-social">
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://www.facebook.com/PhelpsDodgeThailand"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li> <a href="#"><i class="fab fa-line"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-bottom  header-sticky">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2 col-md-1">
-                                <div class="logo mt-1 row">
-                                    <a href="index.html">
-                                        <img src="~/Content/assets/img/logo/CCP45-01.png" alt="" width="160" height="100">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xl-10 col-lg-10 col-md-10">
-                                <!-- Main-menu -->
-                                <div class="main-menu f-right d-none d-lg-block">
-                                    <div class="logo mt-1 row">
-                                        <p hidden>{LOGO ลูกค้า}</p>
-                                        <a href="index.html" hidden>
-                                            <img src="~/Content/assets/img/logo/CCP45-01.png" alt="" width="240">
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <!-- Mobile Menu -->
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- Header End -->
-    </header>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">Main-Menu</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="~/Home/index">Home</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-label">Module</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-shopping-cart menu-icon"></i> <span class="nav-text">รายการรับเข้า</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="~/Stock/Products">รับของเข้า</a></li>
+                            <li><a href="#">ตัดของออก</a></li> 
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-table menu-icon"></i><span class="nav-text">Stock</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="#">รายการสต็อคทั้งหมด</a></li>
+                            <li><a href="#">รายการสต็อค สาขา-</a></li>
+                            <li><a href="#">รายการสต็อค สาขา-</a></li>
+                            <li><a href="#">รายการสต็อค สาขา-</a></li>
+                        </ul>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="container-fluid mt-3">
+
+                @RenderBody()
+            </div>
+            <!-- #/ container -->
+        </div>
+        <div class="container body">
 
 
-
-    <div class="body-content">
-
-        @RenderBody()
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://www.pdcable.com/en/home-2/">IT phelps dodge</a> 2023</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
     </div>
-     
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="~/Content/plugins/common/common.min.js"></script>
+    <script src="~/Content/js/custom.min.js"></script>
+    <script src="~/Content/js/settings.js"></script>
+    <script src="~/Content/js/gleek.js"></script>
+    <script src="~/Content/js/styleSwitcher.js"></script>
 
-    <footer class="footer"style=""hidden>
-        <div class="copy-right_text wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".3s">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <p class="copy_right text-center">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This project <i class="fa fa-heart-o" aria-hidden="true"></i> by Business Team (IT Stark)</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- JS here -->
-    <!-- All JS Custom Plugins Link Here here -->
-    <script src="~/Content/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Chartjs -->
+    <script src="~/Content/plugins/chart.js/Chart.bundle.min.js"></script>
+    <!-- Circle progress -->
+    <script src="~/Content/plugins/circle-progress/circle-progress.min.js"></script>
+    <!-- Datamap -->
+    <script src="~/Content/plugins/d3v3/index.js"></script>
+    <script src="~/Content/plugins/topojson/topojson.min.js"></script>
+    <script src="~/Content/plugins/datamaps/datamaps.world.min.js"></script>
+    <!-- Morrisjs -->
+    <script src="~/Content/plugins/raphael/raphael.min.js"></script>
+    <script src="~/Content/plugins/morris/morris.min.js"></script>
+    <!-- Pignose Calender -->
+    <script src="~/Content/plugins/moment/moment.min.js"></script>
+    <script src="~/Content/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <!-- ChartistJS -->
+    <script src="~/Content/plugins/chartist/js/chartist.min.js"></script>
+    <script src="~/Content/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="~/Content/assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="~/Content/assets/js/popper.min.js"></script>
-    <script src="~/Content/assets/js/bootstrap.min.js"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="~/Content/assets/js/jquery.slicknav.min.js"></script>
+    <script src="~/Content/plugins/tables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Content/plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+    <script src="~/Content/js/dashboard/dashboard-1.js"></script>
 
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="~/Content/assets/js/owl.carousel.min.js"></script>
-    <script src="~/Content/assets/js/slick.min.js"></script>
-    <!-- One Page, Animated-HeadLin -->
-    <script src="~/Content/assets/js/wow.min.js"></script>
-    <script src="~/Content/assets/js/animated.headline.js"></script>
-    <script src="~/Content/assets/js/jquery.magnific-popup.js"></script>
+    <script src="~/Content/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Clock Plugin JavaScript -->
+    <script src="~/Content/plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <!-- Color Picker Plugin JavaScript -->
+    <script src="~/Content/plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+    <script src="~/Content/plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+    <script src="~/Content/plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="~/Content/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="~/Content/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="~/Content/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
-    <!-- Scrollup, nice-select, sticky -->
-    <script src="~/Content/assets/js/jquery.scrollUp.min.js"></script>
-    <!--
-    <script src="~/Content/assets/js/jquery.nice-select.min.js"></script>----------->
-    <script src="~/Content/assets/js/jquery.sticky.js"></script>
-
-    <!-- contact js -->
-    <script src="~/Content/assets/js/contact.js"></script>
-    <script src="~/Content/assets/js/jquery.form.js"></script>
-    <script src="~/Content/assets/js/jquery.validate.min.js"></script>
-    <script src="~/Content/assets/js/mail-script.js"></script>
-    <script src="~/Content/assets/js/jquery.ajaxchimp.min.js"></script>
-
-    <!-- Jquery Plugins, main Jquery -->
-    <script src="~/Content/assets/js/plugins.js"></script>
-    <script src="~/Content/assets/js/main.js"></script>
-
-
-    <!--  notification JS
-       ============================================ -->
-    <script src="~/Content/assets/js/notification/bootstrap-growl.min.js"></script>
-
-    <!-- Data Table JS
-        ============================================ -->
-    <script src="~/Content/assets/js/data-table/jquery.dataTables.min.js"></script>
-    <script src="~/Content/assets/js/data-table/data-table-act.js"></script>
+    <script src="~/Content/js/plugins-init/form-pickers-init.js"></script>
 
 
 
 
-
+    @RenderSection("scripts", required: false)
     <script type="text/javascript">
         var baseUrl = "@Url.Content("~")";
     </script>
 </body>
+
 </html>
