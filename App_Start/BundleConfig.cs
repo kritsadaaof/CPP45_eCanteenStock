@@ -25,6 +25,9 @@ namespace CPP45_eCanteenStock
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/HomeIndex/js").Include(
+                     "~/Scripts/Home/js_Index.js"));
         }
     }
 }
