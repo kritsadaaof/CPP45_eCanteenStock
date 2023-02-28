@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CPP45_eCanteenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="W_Master_Item_Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Pro_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pro_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Pro_Type" Type="Int32" />
+    <Property Name="Pro_Unit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Pro_Pack" Type="Int32" />
+    <Property Name="Pro_Qty" Type="Double" />
+    <Property Name="Pro_Barcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pro_Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Pro_Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Pro_Create_Date" Type="DateTime" Precision="7" />
+    <Property Name="Pro_Update_Date" Type="DateTime" Precision="7" />
+    <Property Name="Create_By" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="W_Master_Package">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Pack_ID" Type="Int32" Nullable="false" />
+    <Property Name="Pack_Des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pack_QTY" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="W_TR_Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TR_Pro_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TR_Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TR_Barcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TR_Pack" Type="Int32" />
+    <Property Name="TR_Qty" Type="Double" />
+    <Property Name="TR_Create_Date" Type="DateTime" Precision="7" />
+    <Property Name="TR_Update_Date" Type="DateTime" Precision="7" />
+    <Property Name="TR_By" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="CPP45_eCanteenEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="W_Master_Item_Product" EntityType="Self.W_Master_Item_Product" />
+    <EntitySet Name="W_Master_Package" EntityType="Self.W_Master_Package" />
+    <EntitySet Name="W_TR_Product" EntityType="Self.W_TR_Product" />
+  </EntityContainer>
+</Schema>

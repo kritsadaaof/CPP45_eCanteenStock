@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CPP45_eCanteenModelStoreContainer" CdmEntityContainer="CPP45_eCanteenEntities">
+    <EntitySetMapping Name="W_Master_Item_Product">
+      <EntityTypeMapping TypeName="CPP45_eCanteenModel.W_Master_Item_Product">
+        <MappingFragment StoreEntitySet="W_Master_Item_Product">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Pro_ID" ColumnName="Pro_ID" />
+          <ScalarProperty Name="Pro_Name" ColumnName="Pro_Name" />
+          <ScalarProperty Name="Pro_Type" ColumnName="Pro_Type" />
+          <ScalarProperty Name="Pro_Unit" ColumnName="Pro_Unit" />
+          <ScalarProperty Name="Pro_Pack" ColumnName="Pro_Pack" />
+          <ScalarProperty Name="Pro_Qty" ColumnName="Pro_Qty" />
+          <ScalarProperty Name="Pro_Barcode" ColumnName="Pro_Barcode" />
+          <ScalarProperty Name="Pro_Price" ColumnName="Pro_Price" />
+          <ScalarProperty Name="Pro_Cost" ColumnName="Pro_Cost" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Pro_Create_Date" ColumnName="Pro_Create_Date" />
+          <ScalarProperty Name="Pro_Update_Date" ColumnName="Pro_Update_Date" />
+          <ScalarProperty Name="Create_By" ColumnName="Create_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="W_Master_Package">
+      <EntityTypeMapping TypeName="CPP45_eCanteenModel.W_Master_Package">
+        <MappingFragment StoreEntitySet="W_Master_Package">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Pack_ID" ColumnName="Pack_ID" />
+          <ScalarProperty Name="Pack_Des" ColumnName="Pack_Des" />
+          <ScalarProperty Name="Pack_QTY" ColumnName="Pack_QTY" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="W_TR_Product">
+      <EntityTypeMapping TypeName="CPP45_eCanteenModel.W_TR_Product">
+        <MappingFragment StoreEntitySet="W_TR_Product">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TR_Pro_ID" ColumnName="TR_Pro_ID" />
+          <ScalarProperty Name="TR_Status" ColumnName="TR_Status" />
+          <ScalarProperty Name="TR_Barcode" ColumnName="TR_Barcode" />
+          <ScalarProperty Name="TR_Pack" ColumnName="TR_Pack" />
+          <ScalarProperty Name="TR_Qty" ColumnName="TR_Qty" />
+          <ScalarProperty Name="TR_Create_Date" ColumnName="TR_Create_Date" />
+          <ScalarProperty Name="TR_Update_Date" ColumnName="TR_Update_Date" />
+          <ScalarProperty Name="TR_By" ColumnName="TR_By" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

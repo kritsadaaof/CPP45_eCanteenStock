@@ -166,3 +166,5 @@ C:\Users\Admin\Desktop\CPP45_eCanteenStock\obj\Debug\CPP45_eCanteenStock.csproj.
 C:\Users\Admin\Desktop\CPP45_eCanteenStock\obj\Debug\CPP45_eCanteenStock.csproj.CopyComplete
 C:\Users\Admin\Desktop\CPP45_eCanteenStock\obj\Debug\CPP45_eCanteenStock.dll
 C:\Users\Admin\Desktop\CPP45_eCanteenStock\obj\Debug\CPP45_eCanteenStock.pdb
+C:\Users\admin\Desktop\Master\CPP45_eCanteenStock\bin\EntityFramework.dll
+C:\Users\admin\Desktop\Master\CPP45_eCanteenStock\bin\EntityFramework.xml

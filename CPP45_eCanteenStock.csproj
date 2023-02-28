@@ -131,15 +131,29 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DB_CPP45_E.Context.cs">
+    <Compile Include="Models\DB_W_CPP45.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DB_CPP45_E.Context.tt</DependentUpon>
+      <DependentUpon>DB_W_CPP45.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DB_CPP45_E.Designer.cs">
+    <Compile Include="Models\DB_W_CPP45.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DB_CPP45_E.edmx</DependentUpon>
+      <DependentUpon>DB_W_CPP45.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB_W_CPP45.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_W_CPP45.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\W_Master_Item_Product.cs">
+      <DependentUpon>DB_W_CPP45.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\W_Master_Package.cs">
+      <DependentUpon>DB_W_CPP45.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\W_TR_Product.cs">
+      <DependentUpon>DB_W_CPP45.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -5104,19 +5118,25 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\DB_CPP45_E.Context.tt">
+    <Content Include="Models\DB_W_CPP45.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DB_CPP45_E.Context.cs</LastGenOutput>
+      <DependentUpon>DB_W_CPP45.edmx</DependentUpon>
+      <LastGenOutput>DB_W_CPP45.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DB_W_CPP45.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_W_CPP45.edmx</DependentUpon>
+      <LastGenOutput>DB_W_CPP45.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\DB_CPP45_E.edmx">
+    <EntityDeploy Include="Models\DB_W_CPP45.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DB_CPP45_E.Designer.cs</LastGenOutput>
+      <LastGenOutput>DB_W_CPP45.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\DB_CPP45_E.edmx.diagram">
-      <DependentUpon>DB_CPP45_E.edmx</DependentUpon>
-    </None>
+    <Content Include="Models\DB_W_CPP45.edmx.diagram">
+      <DependentUpon>DB_W_CPP45.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\Home\js_Index.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

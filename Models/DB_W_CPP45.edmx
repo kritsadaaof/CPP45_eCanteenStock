@@ -103,7 +103,7 @@
           <Property Name="TR_By" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="CPP45_eCanteenEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="W_Master_Item_Product" EntityType="Self.W_Master_Item_Product" />
           <EntitySet Name="W_Master_Package" EntityType="Self.W_Master_Package" />
           <EntitySet Name="W_TR_Product" EntityType="Self.W_TR_Product" />
@@ -113,7 +113,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CPP45_eCanteenModelStoreContainer" CdmEntityContainer="CPP45_eCanteenEntities">
+        <EntityContainerMapping StorageEntityContainer="CPP45_eCanteenModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="W_Master_Item_Product">
             <EntityTypeMapping TypeName="CPP45_eCanteenModel.W_Master_Item_Product">
               <MappingFragment StoreEntitySet="W_Master_Item_Product">
