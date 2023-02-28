@@ -1,3 +1,21 @@
 
 .vs/CPP45_eCanteenStock/config/applicationhost.config
 .vs/CPP45_eCanteenStock/config/applicationhost.config
+bin/CPP45_eCanteenStock.dll
+bin/CPP45_eCanteenStock.dll
+bin/CPP45_eCanteenStock.pdb
+bin/EntityFramework.xml
+bin/CPP45_eCanteenStock.dll
+bin/CPP45_eCanteenStock.pdb
+obj/Debug/CPP45_eCanteenStock.csproj.CoreCompileInputs.cache
+obj/Debug/CPP45_eCanteenStock.csproj.FileListAbsolute.txt
+obj/Debug/CPP45_eCanteenStock.csprojAssemblyReference.cache
+obj/Debug/CPP45_eCanteenStock.dll
+obj/Debug/CPP45_eCanteenStock.pdb
+obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+obj/Debug/edmxResourcesToEmbed/Models/DB_W_CPP45.csdl
+obj/Debug/edmxResourcesToEmbed/Models/DB_W_CPP45.msl
+obj/Debug/edmxResourcesToEmbed/Models/DB_W_CPP45.ssdl
+obj/Debug/TempPE/Models.DB_W_CPP45.Context.cs.dll
+obj/Debug/TempPE/Models.DB_W_CPP45.cs.dll
+obj/Debug/TempPE/Models.DB_W_CPP45.Designer.cs.dll
