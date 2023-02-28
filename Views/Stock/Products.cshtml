@@ -3,16 +3,18 @@
     ViewBag.Title = "Products";
 }
 
+@Scripts.Render("~/StockProducts/js")
+
 <h2 class="text-center">Products</h2>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12 d-flex">
-            <div class="p-2">
+            <div class="mr-auto p-2">
                 <h2>รายการสินค้าทั้งหมด</h2>
             </div>
             <!-- Button trigger modal -->
-            <div class="ml-auto p-2">
+            <div class="p-2">
                 <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#InputModal">นำเข้ารายการสินค้า</button>
                 <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#CreateModal">สร้างใหม่</button>
             </div>
@@ -94,30 +96,30 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-12">
             <table class="table table-hover table-light">
                 <thead>
                     <tr>
-                        <th class="col-lg-1">รูปสินค้า</th>
-                        <th class="col-lg-1">รหัสสินค้า</th>
-                        <th class="col-lg-4">รายการสินค้า</th>
-                        <th class="col-lg-1">ราคาต่อหน่วย</th>
-                        <th class="col-lg-1">จำนวนคงคลัง</th>
-                        <th class="col-lg-2">หมวดสินค้า</th>
-                        <th class="col-lg-1">แก้ไข</th>
+                        <th class="col-1">รูปสินค้า</th>
+                        <th class="col-1">รหัสสินค้า</th>
+                        <th class="col-4">รายการสินค้า</th>
+                        <th class="col-1">ราคาต่อหน่วย</th>
+                        <th class="col-1">จำนวนคงคลัง</th>
+                        <th class="col-2">หมวดสินค้า</th>
+                        <th class="col-1">แก้ไข</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="col-lg-1"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fstock-photo%2Fno_image_available.html&psig=AOvVaw2eLWZ7j13ZoQ0lsr_BzZMR&ust=1677575946955000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNi20cSvtf0CFQAAAAAdAAAAABAS" class="img-fluid" /></td>
-                        <td class="col-lg-1">1234</td>
-                        <td class="col-lg-4">ปลากระป๋อง</td>
-                        <td class="col-lg-1">30</td>
-                        <td class="col-lg-1">20</td>
-                        <td class="col-lg-2">อาหาร</td>
-                        <td class="col-lg-1">
+                        <td class="col-1"><img src="~/Content/images/CCP45-01.png" height="80" width="80" class="img-fluid" /></td>
+                        <td class="col-1">1234</td>
+                        <td class="col-4">ปลากระป๋อง</td>
+                        <td class="col-1">30</td>
+                        <td class="col-1">20</td>
+                        <td class="col-2">อาหาร</td>
+                        <td class="col-1">
                             <div class="dropdown">
                                 <button class="btn btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
                                     EDIT
@@ -128,7 +130,7 @@
                                     <a class="dropdown-item" data-toggle="modal" data-target="#EditModal">แก้ไขสินค้า</a>
                                     <a class="dropdown-item" href="#">สร้างซ้ำ</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">ลบสินค้า</a>
+                                    <a id="Delete_Products" class="dropdown-item" href="#">ลบสินค้า</a>
                                 </div>
                                 <!-- Modal Edit Product-->
                                 <div class="modal fade" id="EditModal" tabindex="-1" aria-labelledby="EditModalLabel" aria-hidden="true">
