@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CPP45_eCanteenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="CPP45_eCanteenModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="W_Master_Item_Product">
           <Key>
             <PropertyRef Name="ID" />
@@ -34,6 +34,15 @@
           <Property Name="Pack_QTY" Type="int" />
           <Property Name="Status" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="W_Master_Type">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type_ID" Type="int" Nullable="false" />
+          <Property Name="Type_Des" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="W_TR_Product">
           <Key>
             <PropertyRef Name="ID" />
@@ -49,16 +58,17 @@
           <Property Name="TR_By" Type="nvarchar" MaxLength="60" />
           <Property Name="Status" Type="nvarchar" MaxLength="20" />
         </EntityType>
-        <EntityContainer Name="CPP45_eCanteenModelStoreContainer">
+        <EntityContainer Name="CPP45_eCanteenModel1StoreContainer">
           <EntitySet Name="W_Master_Item_Product" EntityType="Self.W_Master_Item_Product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="W_Master_Package" EntityType="Self.W_Master_Package" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="W_Master_Type" EntityType="Self.W_Master_Type" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="W_TR_Product" EntityType="Self.W_TR_Product" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="CPP45_eCanteenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="CPP45_eCanteenModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="W_Master_Item_Product">
           <Key>
             <PropertyRef Name="ID" />
@@ -88,6 +98,15 @@
           <Property Name="Pack_QTY" Type="Int32" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="W_Master_Type">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type_ID" Type="Int32" Nullable="false" />
+          <Property Name="Type_Des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="W_TR_Product">
           <Key>
             <PropertyRef Name="ID" />
@@ -103,9 +122,10 @@
           <Property Name="TR_By" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CPP45_eCanteen" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="W_Master_Item_Product" EntityType="Self.W_Master_Item_Product" />
           <EntitySet Name="W_Master_Package" EntityType="Self.W_Master_Package" />
+          <EntitySet Name="W_Master_Type" EntityType="Self.W_Master_Type" />
           <EntitySet Name="W_TR_Product" EntityType="Self.W_TR_Product" />
         </EntityContainer>
       </Schema>
@@ -113,9 +133,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CPP45_eCanteenModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="CPP45_eCanteenModel1StoreContainer" CdmEntityContainer="CPP45_eCanteen">
           <EntitySetMapping Name="W_Master_Item_Product">
-            <EntityTypeMapping TypeName="CPP45_eCanteenModel.W_Master_Item_Product">
+            <EntityTypeMapping TypeName="CPP45_eCanteenModel1.W_Master_Item_Product">
               <MappingFragment StoreEntitySet="W_Master_Item_Product">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Pro_ID" ColumnName="Pro_ID" />
@@ -135,7 +155,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="W_Master_Package">
-            <EntityTypeMapping TypeName="CPP45_eCanteenModel.W_Master_Package">
+            <EntityTypeMapping TypeName="CPP45_eCanteenModel1.W_Master_Package">
               <MappingFragment StoreEntitySet="W_Master_Package">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Pack_ID" ColumnName="Pack_ID" />
@@ -145,8 +165,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="W_Master_Type">
+            <EntityTypeMapping TypeName="CPP45_eCanteenModel1.W_Master_Type">
+              <MappingFragment StoreEntitySet="W_Master_Type">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Type_ID" ColumnName="Type_ID" />
+                <ScalarProperty Name="Type_Des" ColumnName="Type_Des" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="W_TR_Product">
-            <EntityTypeMapping TypeName="CPP45_eCanteenModel.W_TR_Product">
+            <EntityTypeMapping TypeName="CPP45_eCanteenModel1.W_TR_Product">
               <MappingFragment StoreEntitySet="W_TR_Product">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="TR_Pro_ID" ColumnName="TR_Pro_ID" />

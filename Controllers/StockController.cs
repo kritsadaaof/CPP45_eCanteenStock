@@ -10,7 +10,8 @@ namespace CPP45_eCanteenStock.Controllers
    
     public class StockController : Controller
     {
-       private CPP45_eCanteenEntities DbFile = new CPP45_eCanteenEntities();  //DB
+     //  private CPP45_eCanteenEntities DbFile = new CPP45_eCanteenEntities();  //DB
+        private CPP45_eCanteen DbFile = new CPP45_eCanteen();
         // GET: Stock
         public ActionResult Index()
         {
