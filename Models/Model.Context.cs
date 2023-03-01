@@ -13,10 +13,10 @@ namespace CPP45_eCanteenStock.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CPP45_eCanteenEntities : DbContext
+    public partial class CPP45_eCanteen : DbContext
     {
-        public CPP45_eCanteenEntities()
-            : base("name=CPP45_eCanteenEntities")
+        public CPP45_eCanteen()
+            : base("name=CPP45_eCanteen")
         {
         }
     
@@ -27,6 +27,7 @@ namespace CPP45_eCanteenStock.Models
     
         public DbSet<W_Master_Item_Product> W_Master_Item_Product { get; set; }
         public DbSet<W_Master_Package> W_Master_Package { get; set; }
+        public DbSet<W_Master_Type> W_Master_Type { get; set; }
         public DbSet<W_TR_Product> W_TR_Product { get; set; }
     }
 }
