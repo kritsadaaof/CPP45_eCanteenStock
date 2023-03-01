@@ -2,8 +2,10 @@
 @{
     ViewBag.Title = "Products";
 }
+<!-- Link Script-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-@Scripts.Render("~/StockProducts/js")
+@Scripts.Render("~/StockProduct/js")
 
 <h2 class="text-center">Products</h2>
 
@@ -61,21 +63,21 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputQuantity">จำนวนสินค้า:</label>
-                                            <input type="text" class="form-control" id="inputQuantity">
+                                            <input type="number" class="form-control" id="inputQuantity">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPrice">ราคาขาย:</label>
-                                            <input type="text" class="form-control" id="inputPrice">
+                                            <input type="number" class="form-control" id="inputPrice">
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="dateInput">วันที่:</label>
-                                            <input type="date" class="form-control" id="dateInput">
+                                            <input type="date" class="form-control" id="inputData">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputBuy">ราคาซื้อ:</label>
-                                            <input type="text" class="form-control" id="inputBuy">
+                                            <input type="number" class="form-control" id="inputBuy">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -87,7 +89,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
-                            <button type="submit" class="btn btn-primary">บันทึก</button>
+                            <button type="submit" class="btn btn-primary" id="Summit_Create">บันทึก</button>
                         </div>
                     </div>
                 </div>
@@ -213,3 +215,5 @@
         </div>
     </div>
 </div>
+
+
